@@ -89,9 +89,9 @@ assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b ))));
 
 endmodule
 
-Developed by:Kaviya.V.M
+Developed by:Esakkindhar A
 
-RegisterNumber:24900714
+RegisterNumber:24001907
 
 
 
