@@ -1,5 +1,5 @@
 # FULL_ADDER_SUBTRACTOR
-
+# Date:22/10/2024 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
 **AIM:**
@@ -25,6 +25,8 @@ Carry = AB + ACin + BCin
 ![image](https://github.com/naavaneetha/FULL_ADDER_SUBTRACTOR/assets/154305477/0f30ba51-5ffb-4198-845f-18e054f675e7)
 
 **Figure -1 FULL ADDER**
+# Truth Table
+![WhatsApp Image 2024-12-21 at 09 58 41_5d681529](https://github.com/user-attachments/assets/bc098c26-9e2e-44b2-b08d-892fe39174ef)
 
 **Full Subtractor**
 
@@ -36,16 +38,11 @@ Diff = A ⊕ B ⊕ Bin
 
 Borrow out = A'Bin + A'B + BBin
 
-**TRUTH TABLE**
+# Truthtable
 
-![WhatsApp Image 2024-12-21 at 09 58 44_a02f2549](https://github.com/user-attachments/assets/6b043e95-fb65-4f95-8fff-b687847cc3f1)
-
-![WhatsApp Image 2024-12-21 at 09 59 03_094b7638](https://github.com/user-attachments/assets/80fc4c77-fad1-41bd-8de2-c6bb78c23c92)
-
-
+![WhatsApp Image 2024-12-21 at 09 59 00_fcb9fcab](https://github.com/user-attachments/assets/3de697b1-b45f-48eb-bccb-e2c3fee632af)
 
 **Procedure**
-
 
 1.Type the program in Quartus software.
 
@@ -57,59 +54,47 @@ Borrow out = A'Bin + A'B + BBin
 
 5.For different input combinations generate the timing diagram.
 
-
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-i)FULL ADDER
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
 
+## Full_adder
+```
 module fa(a,b,cin,sum,carry);
-
 input a,b,cin;
-
 output sum,carry;
-
 assign sum=( (a ^ b)^cin);
-
 assign carry= ( (a & b)| ( cin &(a ^ b )));
-
 endmodule
 
-ii)FULL SUBTRACTOR
+```
 
+## Full_subtractor
+```
 module fs(a,b,bin,difference,borrow);
-
 input a,b,bin;
-
 output difference,borrow;
-
 assign difference= ( (a ^ b)^bin);
-
 assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b ))));
-
 endmodule
 
-Developed by:Esakkindhar A
 
-RegisterNumber:24001907
-
-
-
+```
+ Developed by: Esakkindhar A
+ RegisterNumber:24001907
+ 
 **RTL Schematic**
+**Full Adder**
+![image](https://github.com/user-attachments/assets/71384764-ab89-430d-b8c1-c28f73e38f01)
 
+**Full Subtractor**
+![image](https://github.com/user-attachments/assets/db26c434-e6d4-4fcd-9f35-100d54ecc450)
 
-![Full adder sum](https://github.com/user-attachments/assets/4d2c37db-79fc-490a-8b22-b09edf779b89)
-
-![full subtractor ](https://github.com/user-attachments/assets/5fbf92cd-3c16-4909-a868-7c8d696c281c)
-
-
-**Output**
-
-
-![Full adder sum waveform](https://github.com/user-attachments/assets/05c54a2c-29d2-4a34-9a1f-1441f41de5e4)
-
-![full subtractor waveform](https://github.com/user-attachments/assets/4adddc62-bfd0-48d6-8009-d4a22ff1b26c)
-
+**Output Timing Waveform**
+**Full Adder**
+![image](https://github.com/user-attachments/assets/4743f238-4990-411a-bab0-8758d47d36e5)
+**Full Subtractor**
+![image](https://github.com/user-attachments/assets/9b6bc27e-fafb-4ede-850b-9a1cb85b811c)
 
 **Result:**
 
